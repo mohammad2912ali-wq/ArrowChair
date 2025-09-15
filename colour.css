@@ -1,0 +1,20 @@
+    /* used colors */
+    :root{
+        --red : red;
+        --crimson : rgb(12, 79, 79);
+        --blue : blue;
+        --darkblue : darkblue;
+        --orange : orange;
+        --black : black;
+        --grey : grey;
+        --ccc : #ccc;
+        --white : white;
+        --brown : brown;
+        --green : green;
+        --lime : lime;
+        --BlueViolet: #8A2BE2;
+        --Coral: #FF7F50;
+        --DarkGold: #B8860B;
+        --SteelBlue: #4682B4;
+        --RoyalPurple: #6A0DAD;
+    }

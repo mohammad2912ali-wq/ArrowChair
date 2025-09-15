@@ -1,0 +1,92 @@
+#home{
+    height:85vh;
+    /* background:url('images/home-img/psofaimg.jpg') no-repeat , center; */
+    
+background-image:url('images/ourwork-img/contact.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    padding:50px 0;
+   
+}
+#home .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+}
+#home .container .content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.container .content .text-01{
+    font-size:35px;
+    padding:5px;
+    color:var(--black);
+    margin-bottom:10px;
+    width:fit-content;
+    font-weight:600;
+}
+.container .content .text-02{
+    font-size:18px;
+    padding:5px;
+    margin-bottom:20px;
+    font-weight:500;
+    
+}
+.container .content .text-01 span{
+    color:var(--crimson);
+}
+.container .content a{
+    background:var(--crimson);
+    color:var(--white);
+    border-radius:25px;
+    font-size:18px;
+    font-weight:500;
+    padding:8px 22px;
+    cursor:pointer;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    /* border:2px solid var(--crimson); */
+}
+.container .content a:hover{
+    background:white;
+    color:var(--crimson);
+}
+/* responsive starts here */
+@media screen and (max-width:950px){
+    .container .content .text-02{
+        font-size:18px;
+    }
+    .container .content .text-01{
+        font-size:28px;
+    }
+    .container  .content a{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:500px){
+    #home{
+        height:80vh;
+    }
+}
+@media screen and (max-width:440px){
+    .container .content .text-02{
+        font-size:16px;
+    }
+    .container .content .text-01{
+        font-size:25px;
+    }
+}
+@media screen and (max-width:500px){
+    a{
+        word-break:break-all;
+    }
+    .container .content .text-02 , .container .content .text-01{
+        width:100%;
+        margin-inline:auto;
+        text-align:center;
+    }
+}

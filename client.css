@@ -1,0 +1,72 @@
+#clients .bg{
+    height:100vh;
+    background:url('images/service.webp')  center , rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    background-size:cover;
+    background-attachment: fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+#clients .bg .content{
+    width:100%;
+    max-width:520px;
+    color:white;
+    line-height:25px;
+    padding-inline:20px;
+}
+#clients .bg .content .service-heading{
+    text-align:left;
+    margin-bottom:50px;
+    font-size:35px;
+    font-weight:600;
+}
+#clients .bg .content p{
+    margin-bottom:20px;
+    text-align: justify;
+}
+#clients .container{
+    padding:50px;
+}
+#clients .heading{
+    width:fit-content;
+    margin:auto;
+    font-size:28px;
+    position: relative;
+}
+#clients .heading:before{
+    position:absolute;
+    left:0;
+    top:calc(100% + 10px);
+    content:'';
+    height:2px;
+    width:150px;
+    background:var(--crimson);
+}
+#clients .images{
+    margin-top:100px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:20px 40px;
+}
+#clients .images img{
+    max-width:200px;
+    transition: all 0.3s ease;
+    max-height:200px;
+}
+#clients .images img:hover{
+    scale : 1.15;
+}
+@media screen and (max-width:950px){
+    #clients .heading{
+        font-size:25px;
+    }
+}
+@media screen and (max-width:400px) {
+    #clients .container {
+        padding-inline:20px;
+    }
+}

@@ -1,0 +1,114 @@
+/* products design starts here */
+
+#products{
+    padding:50px;
+}
+#products > h1{
+    color:var(--purple);
+    font-size:1.5rem;
+    text-align:center;
+    font-weight:600;
+    margin-bottom:30px;
+}
+#products .container .card{
+    border-radius:5px;
+    border:1px solid rgb(209, 14, 14);
+    width:240px;
+    text-align: center;
+    padding:15px;
+    min-height:300px;
+}
+#products .container .card .img{
+    text-align:center;
+    position:relative;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#products .container .card .img img{
+    max-width:190px;
+    max-height:100%;
+}
+
+#products .container .card .title{
+    font-size:0.9rem;
+    text-align:center;
+    margin:5px 0;
+    font-weight: 800;
+}
+#products .container .card button{
+    width:150px;
+    height:35px;
+    font-size:0.8rem;
+    font-weight:500;
+    background-color:rgb(42, 170, 138);
+    margin-top: 5px;
+}
+#products .container .card button:hover{
+    background-color:rgb(236, 255, 220);
+}
+
+#products .container{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3 , 240px);
+    grid-template-rows:auto;
+    justify-content:center;
+    gap:20px;
+}
+#products .container .card .rating{
+    margin-top:10px;
+    text-align:center;
+}
+#products .container .card .rating img{
+    width:50%;
+    border:2px  solid var(--ccc);
+    padding:5px;
+    border-radius:3px;
+}
+
+/* responsive design starts here */
+
+/* products design starts here */
+
+@media screen and (min-width:1200px){
+    #products .container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:900px){
+    #products .container{
+        grid-template-columns:repeat(2 , 240px);
+        grid-template-rows:repeat(3 , auto);
+    }
+}
+@media screen and (max-width:600px){
+    #products .container{
+        grid-template-columns:240px;
+        grid-template-rows:repeat(6 , auto);
+    }
+}
+/* #home{
+    margin-top:91px;
+    background-image: url('images/home-img//Contactsofa.jpg');  
+    background-attachment:fixed;
+    height:85vh;
+ 
+}
+ */
+ #home {
+    margin-top: 91px;
+    background-image: url('images/home-img/Contactsofa.jpg'); /* single slash */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;      /* makes the image cover full area */
+    background-position: center; /* keeps image centered */
+    height: 85vh;
+}
+
+

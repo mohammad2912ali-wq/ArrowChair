@@ -1,0 +1,161 @@
+.navbar{
+    background:rgb(255,255,255);
+}
+.navbar.active{
+    background:rgba(255,255,255,0.98);
+}
+/* #home{
+    margin-top:91px;
+    
+     background: url(images/home-img/Homeimage.png);
+    background-attachment:fixed;
+    height:65vh;
+    margin-bottom: 50px;
+} */
+ #home {
+    margin-top: 91px;
+    background: url(images/home-img/Homeimage.png) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;  
+    height: 65vh;
+    margin-bottom: 50px;
+}
+
+
+.contact{
+    padding:50px;
+    display:grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows:auto;
+    gap:30px;
+}
+/* get in touch design starts here */
+
+.contact .column-1 .heading{
+    margin-bottom:50px;
+}
+.contact .column-1 .title{
+    font-size:18px;
+    text-transform:uppercase;
+    font-weight: 500;
+}
+.contact .title.address{
+    margin-bottom:20px;
+}
+.contact .column-1 .title span{
+    color:var(--crimson);
+}
+.contact .column-1 .content{
+    display:flex;
+    margin-bottom:30px;
+    column-gap:20px;
+    flex-wrap:wrap;
+}
+.contact .column-1 .content.main{
+    column-gap:10px;
+}
+.contact .column-1 .content .icon{
+    color:var(--crimson);
+    font-size:25px;
+}
+.contact .column-1 .content .text{
+    font-size:15px;
+    line-height:25px;
+    width:90%;
+}
+.contact .column-1 .content.links .text{
+    display:flex;
+    flex-direction:column;
+}
+.contact .column-1 .content a{
+    color:var(--black);
+    text-decoration:underline;
+    text-underline-offset: 5px;
+    margin-bottom:10px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.contact .column-1 .content a:hover{
+    color:var(--crimson);
+}
+.contact .column-1 .content.image{
+    justify-content:start;
+    align-items:center;
+}
+.contact .column-1 .content img{
+    width:100%;
+    max-width:200px;
+}
+
+/* form design starts here */
+.contact form .inputs{
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+}
+.contact form .inputs input , .contact form .inputs textarea{
+    padding-inline:10px;
+    font-size:15px;
+    font-weight:500;
+    border:1px  solid var(--grey);
+    outline:none;
+    border-radius:3px;
+}
+.contact form .inputs input {
+    height:40px;
+}
+.contact form .inputs  textarea{
+    overflow:hidden;
+    resize:none;
+    height:120px;
+    padding-top:5px;
+}
+.contact form .inputs input[type='submit']{
+    width:150px;
+    cursor:pointer;
+    border:none;
+}
+.contact form .error{
+    color:var(--crimson);
+    font-size:14px;
+    font-weight:500;
+    padding-left:5px;
+}
+/* map design starts here */
+#contact .map{
+    padding:50px 20px;
+}
+#contact .map iframe{
+    width:100%;
+    min-height:400px;
+}
+@media screen and (max-width:1050px){
+    .contact{
+        padding-inline:30px;
+    }
+}
+@media screen and (max-width:950px){
+    #home{
+        margin-top:71px;
+    }
+    .contact{
+        grid-template-columns:100%;
+        grid-template-rows:repeat(2,  auto);
+    }
+    .contact .column-1 .content.image{
+        padding-left:50px;
+    }
+}
+@media screen and (max-width:350px){
+   *{
+    word-break:break-all;
+   }
+    .contact{
+        padding-inline:5px;
+        width:100%;
+    }
+    .contact .column-1 .content .text{
+        width:100%;
+    }
+}

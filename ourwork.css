@@ -1,0 +1,175 @@
+#products{
+    padding:50px;
+}
+#products > h1{
+    color:var(--black);
+    font-size:1.9rem;
+    text-align:center;
+    font-weight:600;
+    margin-bottom:30px;
+}
+#products .container .card{
+    border-radius:5px;
+    border:1px solid rgb(189, 187, 187);
+    width:260px;
+    
+}
+#products .container .card .img{
+    height:280px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+#products .container .card .img img{
+   height: 100%;
+   width: 100%;
+}
+#products .container .card button{
+    width:120px;
+    height:35px;
+    font-size:0.9rem;
+    font-weight:400;
+    border: none;
+    background-color: var(--crimson);
+    transition:all 0.3s ease;
+    border-radius: 3px;
+}
+#products .container .card button a{
+    color: white;
+}
+#products .container .card button:hover{
+    background:#1b1b1b;
+}
+#products .container{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(4 , 240px);
+    grid-template-rows:auto;
+    justify-content:center;
+    gap:20px;
+}
+/* products design starts here */
+
+@media screen and (min-width:1200px){
+    #products .container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:900px){
+    #products .container{
+        grid-template-columns:repeat(2 , 240px);
+        grid-template-rows:repeat(3 , auto);
+    }
+}
+@media screen and (max-width:600px){
+    #products .container{
+        grid-template-columns:240px;
+        grid-template-rows:repeat(6 , auto);
+    }
+    
+}
+#home .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    width:100%;
+}
+#home .container .content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.container .content .text-2{
+    font-size:35px;
+    padding:5px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+#home .container .content .text-2 span{
+    color:var(--crimson);
+}
+/* responsive starts here */
+@media screen and (max-width:950px){
+    .container .content .text-1{
+        font-size:18px;
+    }
+    .container .content .text-2{
+        font-size:28px;
+    }
+    .container  .content a{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:500px){
+    #home{
+        height:80vh;
+    }
+}
+@media screen and (max-width:440px){
+    .container .content .text-1{
+        font-size:16px;
+    }
+    .container .content .text-2{
+        font-size:25px;
+    }
+}
+@media screen and (max-width:500px){
+    a{
+        word-break:break-all;
+    }
+    .container .content .text-1 , .container .content .text-2{
+        width:100%;
+        margin-inline:auto;
+        text-align:center;
+    }
+}
+/* contact icon design :start here */
+.whatsapp-btn{
+    float: right;
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    z-index: 9999;
+    border: 1px solid black;
+   padding: 10px;
+   border-radius: 50%;
+   background-color: var(--crimson);
+   border: none;
+}
+.phone-btn{
+    float: right;
+    position: fixed;
+    right: 30px;
+    bottom: 0px;
+    z-index: 9999;
+    border: 1px solid black;
+   padding: 13px;
+   border-radius: 50%;
+   background-color: var(--crimson);
+   border: none;
+   font-size: 25px;
+   
+}
+.phone-btn i{
+    color: white;
+}
+@media screen and (max-width:600px){
+   .phone-btn{
+    right: 5px;
+   }
+   .whatsapp-btn{
+    right: 5px;
+   }
+    
+}
+
+
+
