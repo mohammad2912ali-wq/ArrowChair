@@ -1,8 +1,7 @@
-/* PRODUCTS SECTION */
+/* ================= PRODUCTS ================= */
 #products {
     padding: 50px;
 }
-
 #products > h1 {
     color: var(--purple);
     font-size: 1.5rem;
@@ -10,17 +9,7 @@
     font-weight: 600;
     margin-bottom: 30px;
 }
-
-#products .container {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 240px); /* Desktop: 3 cards ek row me */
-    grid-template-rows: auto;
-    justify-content: center;
-    gap: 20px;
-}
-
-#products .card {
+#products .container .card {
     border-radius: 5px;
     border: 1px solid rgb(209, 14, 14);
     width: 240px;
@@ -28,9 +17,7 @@
     padding: 15px;
     min-height: 300px;
 }
-
-/* Image box */
-#products .card .img {
+#products .container .card .img {
     text-align: center;
     position: relative;
     height: 200px;
@@ -38,21 +25,17 @@
     justify-content: center;
     align-items: center;
 }
-#products .card .img img {
+#products .container .card .img img {
     max-width: 190px;
     max-height: 100%;
 }
-
-/* Title */
-#products .card .title {
+#products .container .card .title {
     font-size: 0.9rem;
     text-align: center;
     margin: 5px 0;
     font-weight: 800;
 }
-
-/* Button */
-#products .card button {
+#products .container .card button {
     width: 150px;
     height: 35px;
     font-size: 0.8rem;
@@ -62,19 +45,19 @@
     border: none;
     cursor: pointer;
 }
-#products .card button:hover {
+#products .container .card button:hover {
     background-color: rgb(236, 255, 220);
 }
-
-/* ⭐ RESPONSIVE FIXES */
-@media screen and (max-width: 1024px) {
-    #products .container {
-        grid-template-columns: repeat(2, 240px); /* Tablet: 2 cards ek row me */
-    }
+#products .container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 20px;
 }
-@media screen and (max-width: 600px) {
-    #products .container {
-        grid-template-columns: 1fr;   /* Mobile: ek row me ek card */
-        justify-items: center;        /* center me align */
-    }
+#products .container .card .rating {
+    margin-top: 10px;
+    text-align: center;
 }
+#products .co
