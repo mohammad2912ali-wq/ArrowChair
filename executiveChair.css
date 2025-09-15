@@ -60,4 +60,89 @@
     margin-top: 10px;
     text-align: center;
 }
-#products .co
+#products .container .card .rating img {
+    width: 50%;
+    border: 2px solid var(--ccc);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* ================= PRODUCTS RESPONSIVE ================= */
+@media screen and (min-width: 1200px) {
+    #products .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 900px) {
+    #products .container {
+        grid-template-columns: repeat(2, 240px);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+@media screen and (max-width: 600px) {
+    #products .container {
+        grid-template-columns: 240px;
+        grid-template-rows: repeat(6, auto);
+    }
+}
+
+/* ================= HOME SECTION ================= */
+#home {
+    margin-top: 91px;
+    background-image: url('images/home-img/Contactsofa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;       /* image full area fill karega */
+    background-position: center;  /* desktop par center me */
+    background-attachment: fixed; /* desktop ke liye */
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* overlay for text readability */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= HOME RESPONSIVE ================= */
+@media screen and (max-width: 1024px) {
+    #home {
+        background-attachment: scroll; /* mobile par smooth scroll */
+        background-position: center top; 
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    #home {
+        background-attachment: scroll; /* mobile par fixed hatao */
+        background-size: cover;
+        background-position: center center; 
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 480px) {
+    #home {
+        background-attachment: scroll; /* mobile par fixed hatao */
+        background-size: cover;
+        background-position: center bottom; 
+        height: 55vh;
+    }
+}
