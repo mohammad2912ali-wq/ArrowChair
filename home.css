@@ -1,225 +1,222 @@
+/* ================= HOME SECTION ================= */
 #home {
-    height: 100vh; /* Ensures it takes the full viewport height */
-    width: 100vw; /* Ensures it takes the full viewport width */
-    /* background: url('/faisal/TestAbout.png') no-repeat center center; */
-    background: url(images/home-img/Homeimage.png);
-    background-size: cover; /* Ensures the image covers the entire section */
-   /* background: url(images/home-img/stock.jpg); */
-    background-attachment: fixed; /* Optional, keeps the image fixed while scrolling */
-    padding: 50px 0;
-}
-
-#home .container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100%;
-    width:100%;
-}
-#home .container .content{
-    margin-bottom: 125px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-}
-.container .content .text-1{
-    font-size:20px;
-    padding:5px;
-    color: var(--white);
-    margin-bottom:10px;
-    width:fit-content;
-    font-weight:500;
-}
-.container .content .text-2{
-    font-size:35px;
-    padding:5px;
-    margin-bottom:20px;
-    font-weight:600;
-}
-.container .content .text-2 span{
-    color:var(--white);
-}
-.container .content a{
-    background:var(--crimson);
-    color:var(--white);
-    border-radius:25px;
-    font-size:18px;
-    font-weight:500;
-    padding:8px 22px;
-    cursor:pointer;
-    cursor:pointer;
-    transition:all 0.3s ease;
-    /* border:2px solid var(--crimson); */
-}
-.container .content a:hover{
-    background:white;
-    color:var(--crimson);
-}
-/* responsive starts here */
-@media screen and (max-width:950px){
-    .container .content .text-1{
-        font-size:18px;
-    }
-    .container .content .text-2{
-        font-size:28px;
-    }
-    .container  .content a{
-        font-size:16px;
-    }
-}
-@media screen and (max-width:500px){
-    #home{
-        height:80vh;
-    }
-}
-@media screen and (max-width:440px){
-    .container .content .text-1{
-        font-size:16px;
-    }
-    .container .content .text-2{
-        font-size:25px;
-    }
-}
-@media screen and (max-width:500px){
-    a{
-        word-break:break-all;
-    }
-    .container .content .text-1 , .container .content .text-2{
-        width:100%;
-        margin-inline:auto;
-        text-align:center;
-    }
-}
-
-/* products design start here */
-#products{
-    padding:50px;
-    background-color: whitergb(226, 229, 229);
-}
-#products > h1{
-    color:var(--black);
-    font-size:1.9rem;
-    text-align:center;
-    font-weight:600;
-    margin-bottom:30px;
-}
-#products .container .card{
-    border-radius:5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    width:240px;
+    height: 100vh;
+    width: 100vw;
+    background: url(images/home-img/Homeimage.png) no-repeat center center;
+    background-size: cover;          /* fills area */
+    background-attachment: fixed;    /* fixed scroll effect for desktop */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding:15px;
-    min-height:250px;
 }
-#products .container .card .img{
-    text-align:center;
-    height:230px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+
+/* ✅ Overlay for better readability */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
 }
-#products .container .card .img img{
-    max-width:150px;
-    max-height:100%;
+
+#home .container {
+    position: relative;
+    z-index: 2; /* keeps text above overlay */
 }
-#products .container .card .title{
-    font-size:1rem;
+
+#home .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content .text-1 {
+    font-size: 20px;
+    padding: 5px;
+    color: var(--white);
+    margin-bottom: 10px;
     font-weight: 500;
-    text-align:center;
-    margin:5px 0;
 }
-#products .container .card button{
-    width:120px;
-    height:35px;
-    font-size:0.9rem;
-    font-weight:400;
+.container .content .text-2 {
+    font-size: 35px;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--white);
+}
+.container .content a {
+    background: var(--crimson);
+    color: var(--white);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.container .content a:hover {
+    background: white;
+    color: var(--crimson);
+}
+
+/* ✅ Responsive tweaks */
+@media screen and (max-width: 950px) {
+    .container .content .text-1 { font-size: 18px; }
+    .container .content .text-2 { font-size: 28px; }
+    .container .content a { font-size: 16px; }
+}
+@media screen and (max-width: 768px) {
+    #home {
+        background-attachment: scroll;   /* fix for mobile */
+        background-position: top center; /* chair dikhane ke liye upar */
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    #home {
+        background-position: center bottom; /* chhoti screen me chair ko niche se center karega */
+        height: 70vh;
+    }
+    .container .content .text-1,
+    .container .content .text-2 {
+        width: 100%;
+        margin-inline: auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 440px) {
+    .container .content .text-1 { font-size: 16px; }
+    .container .content .text-2 { font-size: 25px; }
+}
+
+/* ================= PRODUCTS SECTION ================= */
+#products {
+    padding: 50px;
+    background-color: rgb(226, 229, 229);
+}
+#products > h1 {
+    color: var(--black);
+    font-size: 1.9rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#products .container .card {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+                rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 240px;
+    text-align: center;
+    padding: 15px;
+    min-height: 250px;
+}
+#products .container .card .img {
+    text-align: center;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#products .container .card .img img {
+    max-width: 150px;
+    max-height: 100%;
+}
+#products .container .card .title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0;
+}
+#products .container .card button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.9rem;
+    font-weight: 400;
     border: none;
     background-color: rgb(42, 170, 138);
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
     border-radius: 3px;
 }
-#products .container .card button a{
-    color:rgb(109, 98, 98);
+#products .container .card button a {
+    color: rgb(109, 98, 98);
+    text-decoration: none;
 }
-#products .container .card button:hover{
-    background:#e1e8ec;
+#products .container .card button:hover {
+    background: #e1e8ec;
 }
-#products .container{
-    margin-top:20px;
-    display:grid;
-    grid-template-columns:repeat(4 , 240px);
-    grid-template-rows:auto;
-    justify-content:center;
-    gap:20px;
+#products .container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 20px;
 }
-/* products design starts here */
 
-@media screen and (min-width:1200px){
-    #products .container{
-        display:flex;
-        flex-wrap:wrap;
-        gap:20px;
+/* Responsive product grid */
+@media screen and (min-width: 1200px) {
+    #products .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
         justify-content: center;
         align-items: center;
     }
 }
-@media screen and (max-width:900px){
-    #products .container{
-        grid-template-columns:repeat(2 , 240px);
-        grid-template-rows:repeat(3 , auto);
+@media screen and (max-width: 900px) {
+    #products .container {
+        grid-template-columns: repeat(2, 240px);
+        grid-template-rows: repeat(3, auto);
     }
 }
-@media screen and (max-width:600px){
-    #products .container{
-        grid-template-columns:240px;
-        grid-template-rows:repeat(6,auto);
+@media screen and (max-width: 600px) {
+    #products .container {
+        grid-template-columns: 240px;
+        grid-template-rows: repeat(6, auto);
     }
-   
-    
 }
-/* contact icon design :start here */
-.whatsapp-btn{
-    float: right;
+
+/* ================= CONTACT ICONS ================= */
+.whatsapp-btn {
     position: fixed;
     right: 30px;
     bottom: 60px;
     z-index: 9999;
-    border: 1px solid black;
-   padding: 10px;
-   border-radius: 50%;
-   background-color: var(--crimson);
-   border: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--crimson);
+    border: none;
 }
-.phone-btn{
-    float: right;
+.phone-btn {
     position: fixed;
     right: 30px;
     bottom: 0px;
     z-index: 9999;
-    border: 1px solid black;
-   padding: 13px;
-   border-radius: 50%;
-   background-color: var(--crimson);
-   border: none;
-   font-size: 25px;
-   
+    padding: 13px;
+    border-radius: 50%;
+    background-color: var(--crimson);
+    border: none;
+    font-size: 25px;
 }
-.phone-btn i{
+.phone-btn i {
     color: white;
 }
-@media screen and (max-width:600px){
-   .phone-btn{
-    right:15px;
-    bottom: 30px;
-    
-   }
-   .whatsapp-btn{
-    right: 15px;
-     bottom: 95px;
-   }
-    
+
+/* Contact icons responsive */
+@media screen and (max-width: 600px) {
+    .phone-btn {
+        right: 15px;
+        bottom: 30px;
+    }
+    .whatsapp-btn {
+        right: 15px;
+        bottom: 95px;
+    }
 }
-
-
-
